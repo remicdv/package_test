@@ -1,6 +1,7 @@
 LICENSE
 README.md
 setup.py
+./my_package/masterflat_sdssr_18_03_2024.fits
 my_package/__init__.py
 my_package/my_module.py
 my_package.egg-info/PKG-INFO
