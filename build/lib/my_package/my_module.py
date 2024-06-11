@@ -3,10 +3,11 @@ def hello_world():
 
 from astropy.io import fits
 
-fits_image_filename = fits.util.get_testdata_filepath('masterflat_sdssr_18_03_2024.fits')
+def print_fits_info():
+    fits_image_filename = fits.util.get_testdata_filepath('masterflat_sdssr_18_03_2024.fits')
 
-hdul = fits.open(fits_image_filename)
+    hdul = fits.open(fits_image_filename)
 
-hdul.info()
+    hdul.info()
 
-hdul.close()
+    hdul.close()
