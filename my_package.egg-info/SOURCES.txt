@@ -1,7 +1,10 @@
 LICENSE
 README.md
 setup.py
-./my_package/masterflat_sdssr_18_03_2024.fits
+./my_package/data/Capture d’écran du 2024-05-03 10-36-39.png
+./my_package/data/DAPI_installer-ZOOM-et-se-connecter.pdf
+./my_package/data/masterflat_sdssr_18_03_2024.fits
+./my_package/data/username.csv
 my_package/__init__.py
 my_package/my_module.py
 my_package.egg-info/PKG-INFO

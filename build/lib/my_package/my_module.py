@@ -1,5 +1,12 @@
 from astropy.io import fits
-import os
+from pathlib import Path
+from importlib import metadata
+from my_package import my_module
+
+def list_files():
+    path_f = Path(my_module.__file__)
+    path = Path(path_f.parent.absolute().as_posix()+'-'+metadata.version('my_package')+'.data/data/my_package')
+    for child in path.iterdir(): print(child)
 
 def hello_world():
     print("Hello, world!")
