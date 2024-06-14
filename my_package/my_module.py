@@ -3,10 +3,15 @@ from pathlib import Path
 from importlib import metadata
 from my_package import my_module
 
+base_url_data = Path(Path(my_module.__file__).parent.absolute().as_posix()+'-'+metadata.version('my_package')+'.data/data/my_package')
+
 def list_files():
-    path_f = Path(my_module.__file__)
-    path = Path(path_f.parent.absolute().as_posix()+'-'+metadata.version('my_package')+'.data/data/my_package')
-    for child in path.iterdir(): print(child.name)
+    return [file.name for file in base_url_data.iterdir()]
+
+def get_file(filename):
+    file_url = base_url_data / filename
+    with fits.open(file_url.absolute().as_posix()) as hdul:
+        hdul.info()
 
 def hello_world():
     print("Hello, world!")
